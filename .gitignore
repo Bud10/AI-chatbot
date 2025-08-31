@@ -1,0 +1,16 @@
+# Environment files
+backend/.env
+
+# Python virtual environment
+backend/venv/
+backend/__pycache__/
+backend/tester.py
+
+checkermodel.py
+main.py
+
+# Other common ignores
+*.pyc
+*.log
+.DS_Store
+.env
