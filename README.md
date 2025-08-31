@@ -34,12 +34,56 @@ Built using **Gemini LLM** with **LangChain** for orchestration and a **React fr
 ```bash
 git clone https://github.com/your-username/AI-chatbot.git
 cd AI-chatbot
-### 2. Backend Setup
+```
+### 2. Set up Environment Variables
+1. Copy .env.example to .env
+```bash
+cp .env.example .env
+```
+2. Open .env and add your Gemini API key
+```bash
+GEMINI_API_KEY=your_api_key_here
+```   
+### 3. Backend Setup
+```bash
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
-
+```
+### 4. Frontend Setup
+```bash
 cd frontend
 npm install
 npm run dev
+```
+### 5. Open Browser
+``` bash
+Visit http://localhost:5173
+```
+## Usage
+1. Upload your document (PDF, DOCX, or TXT).
 
+2. Ask natural language queries like:
+  - “Summarize this document.”
+  - “What are the key points in section 2?”
+    
+3. Book an appointment:
+  - “Schedule a meeting for me next Monday at 2 PM.”
+  - The chatbot will parse dates, collect details, and confirm.
+### Project Structure
+```
+AI-chatbot/
+├── backend/
+│   ├── models.py
+│   ├── requirements.txt
+│   └── uploads/
+├── frontend/
+│   ├── src/
+│   ├── package.json
+│   └── vite.config.js
+├── .env.example
+└── README.md
+```
+## 📜 License
+
+MIT License © 2025
